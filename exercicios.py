@@ -137,26 +137,85 @@
 
 
 
+# matriz = []
+# m = 3
+# n = 3
+#
+# for i in range(m):
+#     linha = []
+#     for j in range(n):
+#         linha.append(0)
+#
+#         if i == j:
+#
+#             linha[j] = 1
+#
+#
+#     matriz.append(linha)
+#
+#
+# for linha in matriz:
+#     print(linha)
+#
+
+
+import random
+
 matriz = []
 m = 3
 n = 3
 
 for i in range(m):
-    linha = []
+    matriz.append([])
     for j in range(n):
-        linha.append(0)
-
-        if i == j:
-
-            linha[j] = 1
+        matriz[i].append(random.randint(1,10))
 
 
-    matriz.append(linha)
+soma_matriz = 0
 
+for i in matriz:
+    for j in i:
+        soma_matriz += j
+
+for i in matriz:
+    print(i)
+
+# print(soma_matriz)
+
+# diagonal principal
+# count = 0
+# for i in matriz:
+#     print(i[count])
+#     count += 1
+
+# diagonal secundaria
+contador = -1
+for i in matriz:
+    print(i[contador])
+    contador -= 1
+
+
+
+# matriz transposta
+matriz = []
+transpo = []
+
+a = 3
+b = 3
+
+for i in range(a):
+    matriz.append([])
+    for j in range(b):
+        matriz[i].append(random.randint(1,10))
 
 for linha in matriz:
     print(linha)
 
+for j in range(b):
+    transpo.append([])
+    for i in range(a):
+        transpo[j].append(matriz[i][j])
 
-
-
+print("    ")
+for linha in transpo:
+    print(linha)
